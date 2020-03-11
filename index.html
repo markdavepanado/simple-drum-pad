@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Drum Pad</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- font  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="keys">
+        <section class="key-container">
+          <div data-key="82" class="key">
+            <!-- <kbd>R</kbd> -->
+            <h5 class="sound">Crash Cymbal</h5>
+          </div>
+          <div data-key="71" class="key">
+            <!-- <kbd>G</kbd> -->
+            <h5 class="sound">Mid Tom</h5>
+          </div>
+          <div data-key="85" class="key">
+            <!-- <kbd>U</kbd> -->
+            <h5 class="sound">Ride Cymbal</h5>
+          </div>
+        </section>
+
+        <section class="key-container">
+          <div data-key="67" class="key">
+            <!-- <kbd>C</kbd> -->
+            <h5 class="sound">Snare</h5>
+          </div>
+          <div data-key="70" class="key">
+            <!-- <kbd>F</kbd> -->
+            <h5 class="sound">High Tom</h5>
+          </div>
+
+          <div data-key="72" class="key">
+            <!-- <kbd>H</kbd> -->
+            <h5 class="sound">Low Tom</h5>
+          </div>
+        </section>
+
+        <section class="bass-hh-container">
+          <div data-key="66" class="key">
+            <!-- <kbd>B</kbd> -->
+            <h5 class="sound">Bass</h5>
+          </div>
+
+          <div class="hh-container">
+            <div data-key="78" class="key">
+              <!-- <kbd>N</kbd> -->
+              <h5 class="sound">Close Hi-Hat</h5>
+            </div>
+            <div data-key="77" class="key">
+              <!-- <kbd>M</kbd> -->
+              <h5 class="sound">Open Hi-Hat</h5>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="text-container"></div>
+    </div>
+
+    <audio data-key="66" src=""></audio>
+    <audio data-key="78" src=""></audio>
+    <audio data-key="77" src=""></audio>
+    <audio data-key="67" src=""></audio>
+    <audio data-key="71" src=""></audio>
+    <audio data-key="72" src=""></audio>
+    <audio data-key="74" src=""></audio>
+    <audio data-key="69" src=""></audio>
+    <audio data-key="89" src=""></audio>
+
+    <!-- <div class="keykey-container">
+      <p>Key Press:</p>
+      <h1 id="keykey"></h1>
+
+      <div class="keykey-code-container">
+        <p>Key Code:</p>
+        <p id="keykey-code"></p>
+      </div>
+    </div> -->
+
+    <script>
+      const keykey = document.getElementById("keykey");
+      const keykeycode = document.getElementById("keykey-code");
+      window.addEventListener("keydown", function(e) {
+        // console.log(e);
+        // keykey.textContent = e.key;
+        // keykeycode.textContent = " " + e.keyCode;
+      });
+    </script>
+  </body>
+</html>
