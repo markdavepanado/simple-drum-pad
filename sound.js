@@ -11,12 +11,39 @@ function play(e) {
 
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
-    if (!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add("playing");
+    const keypress = document.getElementsByClassName("key-details-youpress");
+    const message = document.getElementsByClassName("message-details-youpress");
+    const imageMessage = document.getElementsByClassName(
+      "image-youpress-container"
+    );
 
-    addRemoveEventListener();
+    const soundName = document.getElementsByClassName("sound-details-youpress");
+
+    keypress[0].innerHTML = truncate(e.key, 6);
+
+    message[0].style.display = "flex";
+
+    // console.log(message[0].children[0]);
+
+    // console.log(soundName[0]);
+    if (!audio) {
+      imageMessage[0].children[0].setAttribute("src", "images/fail.ico");
+      imageMessage[0].children[0].setAttribute("alt", "Wrong");
+      message[0].children[0].innerHTML = "Oops! wrong key";
+      soundName[0].innerHTML = "No sound";
+      return;
+    } else {
+      imageMessage[0].children[0].setAttribute("src", "images/success.ico");
+      imageMessage[0].children[0].setAttribute("alt", "Success");
+      message[0].children[0].innerHTML = "Good! keep going";
+      // key.children[0].innerHTML;
+      soundName[0].innerHTML = key.children[0].innerHTML;
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+
+      addRemoveEventListener();
+    }
   }
 }
 
@@ -81,3 +108,9 @@ window.setInterval(function() {
     //do nothing
   }
 }, 1000);
+
+// ==> for adding dots when string is too long
+function truncate(string, length, delimiter) {
+  delimiter = delimiter || "&hellip;";
+  return string.length > length ? string.substr(0, length) + delimiter : string;
+}
