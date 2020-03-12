@@ -53,6 +53,7 @@ body {
 
 .key {
   transition: all 0.07s ease;
+  cursor: pointer;
 }
 
 .text-container {
@@ -125,7 +126,8 @@ body {
   box-shadow: 0px 0px 5px 5px rgba(253, 255, 230, 0.5);
 }
 
-.playing .sound {
+.playing .sound,
+.key:hover .sound {
   color: #fdffe6 !important;
 }
 
