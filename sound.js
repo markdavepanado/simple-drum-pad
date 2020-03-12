@@ -37,7 +37,7 @@ function play(e) {
       imageMessage[0].children[0].setAttribute("alt", "Success");
       message[0].children[0].innerHTML = "Good! keep going";
       // key.children[0].innerHTML;
-      soundName[0].innerHTML = key.children[0].innerHTML;
+      soundName[0].innerHTML = "Sound: " + key.children[0].innerHTML;
       audio.currentTime = 0;
       audio.play();
       key.classList.add("playing");
