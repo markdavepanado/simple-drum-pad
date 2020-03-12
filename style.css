@@ -109,6 +109,26 @@ body {
   color: #fdffe6 !important;
 }
 
+.playing .sound:focus,
+.key .sound:focus {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.playing .sound::selection,
+.key .sound::selection {
+  background: transparent;
+}
+
+.playing .sound::-moz-selection,
+.key .sound::-moz-selection {
+  background: transparent;
+}
+
 @media only screen and (max-width: 1024px) {
   .key-container .key {
     margin: 5px;

@@ -16,8 +16,7 @@ function play(e) {
     audio.play();
     key.classList.add("playing");
 
-    const keys = document.querySelectorAll(".key");
-    keys.forEach(key => key.addEventListener("transitionend", removeClass));
+    addRemoveEventListener();
   }
 }
 
@@ -46,7 +45,13 @@ function addClickEventListener() {
   }
 }
 
-function clickKey() {
+var pendingClick = 0;
+
+function clickKey(e) {
+  // e.preventDefault();
+  // console.log(e);
+
+  this.classList.remove("playing");
   const dataKey = this.getAttribute("data-key");
 
   const audio = document.querySelector(`audio[data-key="${dataKey}"]`);
@@ -56,12 +61,23 @@ function clickKey() {
 
   this.classList.add("playing");
 
+  addRemoveEventListener();
+}
+
+function addRemoveEventListener() {
   const keys = document.querySelectorAll(".key");
   keys.forEach(key => key.addEventListener("transitionend", removeClass));
 }
 
-function mouseUpKey() {
-  console.log(this);
+// check every 1 second if there is class playing because of multiple click bug
+window.setInterval(function() {
+  const keys = document.querySelectorAll(".key");
 
-  this.classList.remove("playing");
-}
+  try {
+    for (var i = 0; i <= keys.length; i++) {
+      keys[i].classList.remove("playing");
+    }
+  } catch (e) {
+    //do nothing
+  }
+}, 1000);
