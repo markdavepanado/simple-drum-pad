@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: #868686;
+  /* background-color: #868686; */
+  background-color: #424242;
   overflow: hidden;
 }
 
@@ -219,6 +220,14 @@ body {
     width: 100px;
     margin: 5px;
   }
+
+  .header-text-container {
+    width: 40%;
+  }
+
+  /* .header-text-container img {
+    width: 100%;
+  } */
 }
 
 @media only screen and (max-width: 926px) {
@@ -230,6 +239,10 @@ body {
   .hh-container .key {
     height: 90px;
     width: 90px;
+  }
+
+  .header-text-container {
+    width: 50%;
   }
 }
 
