@@ -23,9 +23,6 @@ function play(e) {
 
     message[0].style.display = "flex";
 
-    // console.log(message[0].children[0]);
-
-    // console.log(soundName[0]);
     if (!audio) {
       imageMessage[0].children[0].setAttribute("src", "images/fail.ico");
       imageMessage[0].children[0].setAttribute("alt", "Wrong");
@@ -33,7 +30,6 @@ function play(e) {
       soundName[0].innerHTML = "No sound";
       return;
     } else {
-      // key.children[0].innerHTML;
       soundName[0].innerHTML = "Sound: " + key.children[0].innerHTML;
       audio.currentTime = 0;
       audio.play();
@@ -76,9 +72,6 @@ function addClickEventListener() {
 var pendingClick = 0;
 
 function clickKey(e) {
-  // e.preventDefault();
-  // console.log(e);
-
   this.classList.remove("playing");
   const dataKey = this.getAttribute("data-key");
 
