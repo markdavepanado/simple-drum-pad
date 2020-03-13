@@ -346,6 +346,20 @@ body {
   align-items: center;
 }
 
+@media only screen and (max-width: 1050px) {
+  .help-text-container h1 {
+    font-size: 1.2em;
+  }
+
+  .help-text-container div {
+    font-size: 1.1em;
+  }
+
+  .header-text-container {
+    width: 40%;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .key-container .key {
     margin: 5px;
@@ -356,26 +370,12 @@ body {
     width: 100px;
     margin: 5px;
   }
+}
 
-  .header-text-container {
-    width: 40%;
-  }
-
-  /* .header-text-container img {
-    width: 100%;
-  } */
-
-  .help-text-container h1 {
-    font-size: 1.2em;
-  }
-
+@media only screen and (max-width: 960px) {
   .help-text-container div {
-    font-size: 1.1em;
-  }
-
-  .help-text-container img {
-    width: 25%;
-    left: -25%;
+    line-height: 2em;
+    padding: 0;
   }
 }
 
@@ -393,12 +393,24 @@ body {
   .header-text-container {
     width: 50%;
   }
+
+  .img-help-text-container .img-help-translate-container .help-text-container {
+    padding: 30px;
+  }
 }
 
 @media only screen and (max-width: 840px) {
   .bass-hh-container div[data-key="66"] {
     height: 150px;
     width: 150px;
+  }
+
+  .help-text-container hr {
+    margin: 5px 0;
+  }
+
+  .img-help-text-container {
+    width: 40%;
   }
 }
 
@@ -411,6 +423,10 @@ body {
   .hh-container {
     flex-direction: row;
     margin-top: 10px;
+  }
+
+  .img-help-text-container {
+    width: 45%;
   }
 }
 
@@ -454,6 +470,24 @@ body {
     height: 120px;
     width: 120px;
   }
+
+  .header-text-container {
+    top: 5px;
+    border-radius: 50px;
+    height: 8vh;
+  }
+
+  .header-text-container img {
+    width: 70%;
+  }
+
+  .img-help-text-container {
+    display: none;
+  }
+
+  .youpress-text-container {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 570px) {
@@ -461,9 +495,7 @@ body {
     height: 100px;
     width: 100px;
   }
-}
 
-@media only screen and (max-width: 570px) {
   .key-container .key,
   .hh-container .key {
     margin: 5px;
@@ -477,6 +509,12 @@ body {
   .bass-hh-container div[data-key="66"] {
     height: 180px;
     width: 180px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header-text-container img {
+    width: 90%;
   }
 }
 
