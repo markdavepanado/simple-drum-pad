@@ -475,6 +475,7 @@ body {
     top: 5px;
     border-radius: 50px;
     height: 8vh;
+    padding: 10px 10px 0;
   }
 
   .header-text-container img {
@@ -487,6 +488,10 @@ body {
 
   .youpress-text-container {
     display: none;
+  }
+
+  body {
+    overflow: auto;
   }
 }
 
