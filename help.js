@@ -4,7 +4,7 @@ helpButton.addEventListener("click", help);
 
 function help() {
   const helpTextContainer = document.getElementsByClassName(
-    "help-text-container"
+    "img-help-text-container"
   );
   //   console.log("clicked");
   //   console.log(this);

@@ -33,9 +33,6 @@ function play(e) {
       soundName[0].innerHTML = "No sound";
       return;
     } else {
-      imageMessage[0].children[0].setAttribute("src", "images/success.ico");
-      imageMessage[0].children[0].setAttribute("alt", "Success");
-      message[0].children[0].innerHTML = "Good! keep going";
       // key.children[0].innerHTML;
       soundName[0].innerHTML = "Sound: " + key.children[0].innerHTML;
       audio.currentTime = 0;
@@ -43,6 +40,10 @@ function play(e) {
       key.classList.add("playing");
 
       addRemoveEventListener();
+
+      imageMessage[0].children[0].setAttribute("src", "images/success.ico");
+      imageMessage[0].children[0].setAttribute("alt", "Success");
+      message[0].children[0].innerHTML = "Good! keep going";
     }
   }
 }
@@ -107,7 +108,7 @@ window.setInterval(function() {
   } catch (e) {
     //do nothing
   }
-}, 1000);
+}, 500);
 
 // ==> for adding dots when string is too long
 function truncate(string, length, delimiter) {
