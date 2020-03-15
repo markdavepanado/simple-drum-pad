@@ -1,6 +1,7 @@
 var keysdown = {};
 
 window.addEventListener("keydown", play);
+window.addEventListener("keyup", play);
 
 function play(e) {
   // console.log(keysdown);
